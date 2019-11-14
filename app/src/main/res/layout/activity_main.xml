@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/logo_bupa" />
+
+    <com.example.smilyrating.BoldTextView
+        android:id="@+id/exprence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="100dp"
+
+        android:gravity="center"
+        android:text="How was your experience with us today?"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.hsalf.smilerating.SmileRating
+        android:id="@+id/ratingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exprence"
+        android:layout_centerVertical="true"
+        app:drawingColor="@color/colorPrimary"
+        app:isIndicator="false" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#87cefa"
+        android:visibility="gone">
+
+        <su.levenetc.android.badgeview.BadgeView
+            android:id="@+id/badge_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:badgeAnimationDuration="1000"
+            app:badgeBackgroundColor="#00bfff"
+            app:badgePadding="16dp"
+            app:badgeTextSize="32sp" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>
